@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'login',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -82,11 +84,20 @@ WSGI_APPLICATION = 'football_jb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': os.getenv('DEV_ENGINE'),
+
+        'NAME': os.getenv('DEV_NAME'),
+
+        'USER': os.getenv('DEV_USER'),
+
+        'PASSWORD': os.getenv('DEV_PASSWORD'),
+
+        'HOST': os.getenv('DEV_HOST'),
+
+        'PORT': os.getenv('DEV_PORT'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
