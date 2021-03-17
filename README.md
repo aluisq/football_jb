@@ -1,2 +1,2 @@
 # football_jb
-App para o campeonato do Jardim Botâncio
+App para o campeonato do Jardim Botânico
