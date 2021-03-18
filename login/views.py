@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate,logout as auth_logout, login as aut
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 import time
-from home.views import home
+# from home.views import home
 
 def login(request):
 
