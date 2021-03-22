@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +11,106 @@
     <title>Home - Campeonato JB</title>
     <!-- CDN vue.js para dev -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <h1>BASE</h1>
-    
+    <div id="layout">
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <div class="container-fluid">
+                <a class="navbar-brand" @click="showSideBar()" href="#"><img src="{% static 'images/cup.png'  %}"
+                        alt="menu_cup image"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class=" item_nav_bar nav-link " aria-current="page" href="#"
+                                style="color:goldenrod;">Tabela 2021</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="item_nav_bar nav-link" href="#">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="item_nav_bar nav-link" href="#">Sobre a Copa</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Digite algo..." aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- SiderBar -->
 
-    <!-- Conteúdo -->
+        <div>
+            <nav id="sidebar" class="navbar navbar-expand d-flex flex-column align-items-start">
+            <a href="#" class="navbar-brand text-light mt-5">
+                <div class="display-S font-weight-bold">Teste!</div>
+            </a>
+            <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4">HOME</a>
+                </li>
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4">HOME</a>
+                </li>
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4">HOME</a>
+                </li>
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4">HOME</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        <section class="p-4 my-container">
+            <button id="menu-btn" class="btn my-4">Abre Fecha</button>
+        </section>
+    </div>
+
     {% block content %}{% endblock content %}
+    {% block script %} {% endblock%}  
+   
+    <script>
+        var vue = new Vue({
+            el: "#layout",
+            delimiters: ['[[', ']]'],
+            data() {
+                return {
+                    margin_left: '0',
+                }
+            },
+            methods: {
+                showSideBar() {
+                    this.margin_left ='200px'
+                  
+                },
+                sidebar_off(){
+                    this.active_sidebar = false
+                    }
+                }
+        })
+    </script>
 
-
-    {% block script %}{% endblock%}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <script type="text/javascript">
-        (function(d, m){
-            var kommunicateSettings = 
-                {"appId":"", "agentId":"" ,"popupWidget":true,"automaticChatOpenOnNavigation":true, "onInit": function (){Kommunicate.updateUserLanguage("pt-BR")}};
-            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-            window.kommunicate = m; m._globals = kommunicateSettings;
-        })(document, window.kommunicate || {});
+            (function (d, m) {
+                var kommunicateSettings =
+                    { "appId": "", "agentId": "", "popupWidget": true, "automaticChatOpenOnNavigation": true, "onInit": function () { Kommunicate.updateUserLanguage("pt-BR") } };
+                var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+                window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
     </script>
 </body>
+
 </html>

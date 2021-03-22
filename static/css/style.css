@@ -1,3 +1,50 @@
-#myTable{
-    
+
+/* Menu Topo */
+.item_nav_bar{
+    text-align: center;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.item_nav_bar:hover {
+    opacity: 1;
+    background-color: white;
+}
+
+.item_nav_bar:focus{
+    box-shadow: 0 0 0 0.25rem white;
+}
+
+
+/* Menu Lateral */
+#sidebar{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    margin-left: -300 px;
+    background-color: green;
+    transition: 0.4s;
+}
+#sidebar:link{
+    font-size: 1.25em;;
+}
+#sidebar-link:active, 
+#sidebar-link:focus,
+#sidebar-link:hover {
+    background-color: indigo;
+}
+
+.my-container {
+    transition: 0.4s;;
+}
+
+.active-nav{
+    margin-left: 0;
+}
+
+.active-cont {
+    margin-left: 200px;
 }

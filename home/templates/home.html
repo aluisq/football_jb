@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 <!-- Título -->
 {% block title %} <title>Home - Campeonato JB</title> {% endblock title %}
@@ -8,14 +9,12 @@
 {% block content%}
     
    <div id="app">
-    <strong>[[nome]]</strong>
+      <strong>[[nome]]</strong>
    </div>
-
 {% endblock content%}
 
 <!-- Scripts -->
 {% block script %} 
-
 <script>
    var vue = new Vue({
        el: "#app",
