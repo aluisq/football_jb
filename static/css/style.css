@@ -18,23 +18,24 @@
     box-shadow: 0 0 0 0.25rem white;
 }
 
-
 /* Menu Lateral */
 #sidebar{
-    width: 200px;
-    height: 100vh;
+    width: 150px;
+    height: 150vh;
     position: fixed;
-    margin-left: -300 px;
-    background-color: green;
+    margin-left: -250px;
+    background-color: rgb(0, 0, 0);
     transition: 0.4s;
 }
-#sidebar:link{
-    font-size: 1.25em;;
+
+#sidebar.navbar :link{
+    font-size: 1em;
 }
-#sidebar-link:active, 
-#sidebar-link:focus,
-#sidebar-link:hover {
-    background-color: indigo;
+
+#sidebar.navbar li:active, 
+#sidebar.navbar li:focus,
+#sidebar.navbar li:hover {
+    background-color:#ffc107  ;
 }
 
 .my-container {
@@ -42,9 +43,13 @@
 }
 
 .active-nav{
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .active-cont {
-    margin-left: 200px;
+    margin-left: 150px;
 }
+
+/* #menu-btn {
+    background-color: cyan;
+} */
