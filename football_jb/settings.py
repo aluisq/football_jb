@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'home',
     'estrutura',
     'informativo',
-    'noticia',
     'estatistica'
 ]
 

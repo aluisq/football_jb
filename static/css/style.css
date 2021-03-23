@@ -20,7 +20,7 @@
 
 /* Menu Lateral */
 #sidebar{
-    width: 150px;
+    width: 200px;
     height: 150vh;
     position: fixed;
     margin-left: -250px;
@@ -31,25 +31,28 @@
 #sidebar.navbar :link{
     font-size: 1em;
 }
-
 #sidebar.navbar li:active, 
 #sidebar.navbar li:focus,
 #sidebar.navbar li:hover {
-    background-color:#ffc107  ;
+    background-color:#ffc107;
 }
-
 .my-container {
     transition: 0.4s;;
 }
-
 .active-nav{
     margin-left: 0 !important;
 }
-
 .active-cont {
-    margin-left: 150px;
+    margin-left: 200px;
 }
 
-/* #menu-btn {
-    background-color: cyan;
-} */
+.dropdown-menu
+{
+    background-color: rgb(0, 0, 0) ;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover{
+    background-color: #ffc107;
+}

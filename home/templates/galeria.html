@@ -1,0 +1,110 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content%}
+    
+   <div id="app_galeria" class="sp-4">
+      <!-- <strong>[[nome]]</strong> -->
+      <hr>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 0"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://magazine.zarpo.com.br/wp-content/uploads/2019/03/vista-rainbow-mountain_peru_zarpo.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" class="d-block w-100" alt="...">
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <hr>
+      <!-- Gallery -->
+<div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+  
+      <img
+        src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+  
+      <img
+        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+  
+      <img
+        src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt=""
+      />
+    </div>
+  </div>
+  <!-- Gallery -->
+  <hr>
+  
+
+   </div>
+{% endblock content%}
+
+<!-- Scripts -->
+{% block script %} 
+<script>
+   var vue = new Vue({
+       el: "#app_galeria",
+       delimiters: ['[[', ']]'],
+       data(){
+        return{
+           nome: "GALERIA!"
+    }}
+   })
+</script>
+
+{% endblock script %}

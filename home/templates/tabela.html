@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content%}
+    
+   <div id="app_tabela" style="margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+      <!-- <strong>[[nome]]</strong> -->
+
+      <div class="card text-center">
+         <div class="card-header">
+           <strong> TABELA - 2021 </strong>
+         </div>
+         <div class="card-body table-responsive">
+           <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Clube</th>
+                <th scope="col">Pontuação</th>
+                <th scope="col">VIT</th>
+                <th scope="col">E</th>
+                <th scope="col">DER</th>
+                <th scope="col">GP</th>
+                <th scope="col">GC</th>
+                <th scope="col">SG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Mark</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+               <th scope="row">4</th>
+               <td>Larry the Bird</td>
+               <td>@twitter</td>
+               <td>Mark</td>
+               <td>Otto</td>
+               <td>@mdo</td>
+               <td>Mark</td>
+               <td>@mdo</td>
+               <td>Otto</td>
+             </tr>
+            </tbody>
+          </table>
+         </div>
+         <div class="card-footer text-muted">
+           Última atualização: 23/03/2021 14:02h
+         </div>
+       </div>
+       <hr>
+       <div class="card text-center">
+        <div class="card-header">
+          <strong> Próximos Jogos </strong>
+        </div>
+        <div class="card-body">
+          <h1>PROXIMA RODADA</h1>
+        </div>
+        <div class="card-footer text-muted">
+          Última atualização: 23/03/2021 14:02h
+        </div>
+      </div>
+   </div>
+{% endblock content%}
+
+<!-- Scripts -->
+{% block script %} 
+<script>
+   var vue = new Vue({
+       el: "#app_tabela",
+       delimiters: ['[[', ']]'],
+       data(){
+        return{
+           nome: "TABELA!"
+    }}
+   })
+</script>
+
+{% endblock script %}

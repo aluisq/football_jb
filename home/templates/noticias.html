@@ -1,14 +1,10 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-<!-- Título -->
-{% block title %} <title>Home - Campeonato JB</title> {% endblock title %}
-
-<!-- Conteúdo -->
 
 {% block content%}
     
-   <div id="app_home">
+   <div id="app_noticias">
       <strong>[[nome]]</strong>
    </div>
 {% endblock content%}
@@ -17,11 +13,11 @@
 {% block script %} 
 <script>
    var vue = new Vue({
-       el: "#app_home",
+       el: "#app_noticias",
        delimiters: ['[[', ']]'],
        data(){
         return{
-           nome: "Arthur"
+           nome: "NOTICIAS!"
     }}
    })
 </script>
