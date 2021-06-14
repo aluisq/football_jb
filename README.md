@@ -2,4 +2,4 @@
 App para o campeonato do Jardim Botânico
 
 
-# APP em construção baseado no framework web Django. 
+# APP em construção baseado no web framework Django. 
